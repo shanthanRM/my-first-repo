@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+          - name: Add DNS server IPs onto the Linux servers
+            blockinfile:
+                path: /etc/resolv.conf
+                block: | 
+                       nameserver 127.0.0.1
+                       nameserver 127.0.0.2
+                       nameserver 127.0.0.3
