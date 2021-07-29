@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+          - replace:
+                  path: /home/ec2-user/textfile.txt
+                  regexp: 'Pradhyumn'
+                  replace: 'Shanthan'
+                  backup: yes
